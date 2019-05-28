@@ -5,28 +5,51 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<header>
+	<nav>
+		<h1>
+			<ul>
+				<li>Formulario</li>
+				<li>Acerca de nosotros</li>
+				<li>Instrucciones para enviar formulario</li>
+			</ul>
+		</h1>
+	</nav>
+</header>
+	<h1 style="position: absolute;">PÁGINA REALIZADA POR DAVID CORTÉS</h1>
+	<img src="img/logo.png" width="500" height="500" style="position: relative; padding-top: 50px;">
 
-	<ul>
-		<li>Formulario</li>
-		<li>Acerca de nosotros</li>
-	</ul>
+<br>
+	<div style="float: right; margin-top: -500px; margin-right: 200px;">
+		<button id="boton0" type="button" onclick="mostrar0()">Añadir formulario</button>
+		<button id="boton00" type="button" onclick="ocultar0()" style="display: none;">Eliminar formulario</button><br>
+	</div>
 
-	<form>
-		<button><label for="nombre">Nombre</label></button><br>
-		<input type="text" name="Nombre" id="nombre"><br>
+	<form id="nametext0" onclick="mostrar00()" style="display: none; text-align: center;">
+
+		<div class="form" style="float: right; margin-top: -400px; margin-right: 300px; border: 2px solid black;">
+		<p style="padding: 5px; border: 1px solid black"><strong>PINCHA Y RELLENA EL FORMULARIO</strong></p><br>
+
+		<button id="boton1" type="button" onclick="mostrar()">Mostrar Nombre</button>
+		<button id="boton2" type="button" onclick="ocultar()" style="display: none;">Ocultar Nombre</label></button><br>
+		<input type="text" name="Nombre" id="nametext" style="display: none;">
 		<br>
-		<label for="apellidos">Apellidos</label><br>
-		<input type="text" name="Apellidos"><br>
-		<br>
-		<label for="email">Correo electrónico</label><br>
-		<input type="email" name="email"><br>
-		<br>
-		<label for="fecha">Fecha de nacimiento</label><br>
-		<input type="date" name="fecha" min="2001" max="2019"><br>
-		<br>
-		<label for="tipo">Tipo de satisfacción</label><br>
-		<br>
-		<select>
+		<button id="boton3" type="button" onclick="mostrar2()">Mostrar Apellidos</button>
+		<button id="boton4" type="button" onclick="ocultar2()" style="display: none;">Ocultar Apellidos</button><br>
+		<input type="text" name="Apellidos" id="nametext2" style="display: none">
+	<br>
+		<button id="boton5" type="button" onclick="mostrar3()">Mostrar Correo</button>
+		<button id="boton6" type="button" onclick="ocultar3()" style="display: none;">Ocultar Correo</button>
+		<input type="email" name="email" id="nametext3" style="display: none;"><br>
+	<br>
+		<button id="boton7" type="button" onclick="mostrar4()">Mostrar Fecha</button>
+		<button id="boton8" type="button" onclick="ocultar4()" style="display: none;">Ocultar Fecha</button><br>
+		<input type="date" name="fecha" min="2001" max="2019" id="nametext4" style="display: none">
+	<br>
+		<button id="boton9" type="button" onclick="mostrar5()">Mostrar Satisfacción</button>
+		<button id="boton10" type="button" onclick="ocultar5()" style="display: none;">Ocultar Satisfacción</button>
+	<br>
+		<select id="nametext5" style="display: none;">
 			<option value="---">---</option>
 			<option value="Muy-mala">Muy Mala</option>
 			<option value="Mala">Mala</option>
@@ -37,10 +60,77 @@
 
 		</select>
 		<br>
-		<label for="enviar"></label><br>
-		<input type="submit" name="enviar"><br>
+			<label for="enviar"></label><br>
+			<input type="submit" name="enviar"><br>
+		</div>
 	</form>
+
+<script type="text/javascript">
+
+	function mostrar(){
+		document.getElementById('boton1').style.display='none';
+		document.getElementById('nametext').style.display='block';
+		document.getElementById('boton2').style.display='block';
+	}
+	function ocultar(){
+		document.getElementById('nametext').style.display='none';
+		document.getElementById('boton1').style.display='block';
+		document.getElementById('boton2').style.display='none';
+	}
+		function mostrar2(){
+		document.getElementById('boton3').style.display='none';
+		document.getElementById('nametext2').style.display='block';
+		document.getElementById('boton4').style.display='block';
+	}
+	function ocultar2(){
+		document.getElementById('nametext2').style.display='none';
+		document.getElementById('boton3').style.display='block';
+		document.getElementById('boton4').style.display='none';
+	}
+	function mostrar3(){
+		document.getElementById('boton5').style.display='none';
+		document.getElementById('nametext3').style.display='block';
+		document.getElementById('boton6').style.display='block';
+	}
+	function ocultar3(){
+		document.getElementById('nametext3').style.display='none';
+		document.getElementById('boton5').style.display='block';
+		document.getElementById('boton6').style.display='none';
+	}
+	function mostrar4(){
+		document.getElementById('boton7').style.display='none';
+		document.getElementById('nametext4').style.display='block';
+		document.getElementById('boton8').style.display='block';
+	}
+	function ocultar4(){
+		document.getElementById('nametext4').style.display='none';
+		document.getElementById('boton7').style.display='block';
+		document.getElementById('boton8').style.display='none';
+	}
+	function mostrar5(){
+		document.getElementById('boton9').style.display='none';
+		document.getElementById('nametext5').style.display='block';
+		document.getElementById('boton10').style.display='block';
+	}
+	function ocultar5(){
+		document.getElementById('nametext5').style.display='none';
+		document.getElementById('boton9').style.display='block';
+		document.getElementById('boton10').style.display='none';
+	}
+	function mostrar0(){
+		document.getElementById('boton0').style.display='none';
+		document.getElementById('nametext0').style.display='block';
+		document.getElementById('boton00').style.display='block';
+	}
+	function ocultar0(){
+		document.getElementById('nametext0').style.display='none';
+		document.getElementById('boton0').style.display='block';
+		document.getElementById('boton00').style.display='none';
+	}
+
+</script>
 
 
 </body>
+
 </html>

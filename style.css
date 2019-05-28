@@ -1,13 +1,25 @@
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: #CD853F;
+}
+
+.enviar{
+	width: 10px;
+	text-align: center;
+}
+
 #nombre{
 	 padding: 10px;
-    background: orange;
     width: 95px;
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 0px 1px #000;
     display: inline-block;
-    display: none;
 }
 
 
@@ -18,4 +30,51 @@ ul{
     background-repeat: no-repeat;
     background-size: cover;
     display: block;
+}
+
+h1{
+	text-align: center;
+}
+
+li{
+	display: inline-block;
+	margin: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	color: black;
+}
+
+header{
+	border: 0px solid black;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #DAA520;
+}
+
+#boton0{
+	float: left; 
+}
+
+button{
+	background-color: #8B4513;
+	color: white;
+	border: 2px solid #8B4513;
+	border-style: groove;
+}
+
+#boton0{
+	width: 200px;
+	height: 50px;
+}
+
+#boton00{
+	width: 200px;
+	height: 50px;
+}
+
+input{
+	background-color: #CD853F;
+	border: 1px solid black;
 }
