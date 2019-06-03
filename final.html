@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Proyecto final Javascript</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <header>
+	<a href="final.html"><img src="img/logo.png" style="max-width: 100%;"></a>
+	<div class="cabecera">
 	<nav>
 		<h1>
 			<ul>
-				<li>Formulario</li>
-				<li>Acerca de nosotros</li>
+				<input type="search" name="Buscador" placeholder="Buscar aqui..." style="position: relative; background-color: white; display: inline-block; margin-left: -50px; ">
+				<button style="cursor: pointer;">Buscar</button>
+				<a href="final.html"><li>Inicio / Formulario</li></a>
+				<a href="nosotros.html"><li>Acerca de nosotros</li></a>
 				<li>Instrucciones para enviar formulario</li>
+				<button id="login"onclick="mostrarlogin()" style="background-color: transparent; border: 0px; font-size: 20px; cursor: pointer;"><li><strong>Login</strong></li></a></button>
+				<button id="login2" onclick="ocultarlogin()" style="background-color: transparent; border: 0px; font-size: 20px; display: none;"><li><strong>No Login</strong></li></a></button>
+		<div style="border: 2px solid black; display: inline-block; right: 5px; display: none; cursor: pointer;" id="login1">
+				<label for="Usuario" style="margin: 5px; margin-right: 10px;">Usuario</label>
+				<input type="text" name="usuario" style="top: 100px;">
+			<div style="margin: 5px;">
+				<label for="Contraseña">Contraseña</label>
+				<input type="password" name="contraseña">
+				<input type="submit" name="enviar" style="display: block; margin-left: 125px;
+				margin-top: 5px; cursor: pointer;">
+			</div>
+		</div>
 			</ul>
 		</h1>
+
+
+		
 	</nav>
+	</div>
 </header>
-	<h1 style="position: absolute;">PÁGINA REALIZADA POR DAVID CORTÉS</h1>
-	<img src="img/logo.png" width="500" height="500" style="position: relative; padding-top: 50px;">
+	<h1 style="padding-top: 10px; text-align: center;">FORMULARIO</h1>
+
 
 <br>
-	<div style="float: right; margin-top: -500px; margin-right: 200px;">
-		<button id="boton0" type="button" onclick="mostrar0()">Añadir formulario</button>
-		<button id="boton00" type="button" onclick="ocultar0()" style="display: none;">Eliminar formulario</button><br>
+	<div>
+		<button id="boton0" type="button" onclick="mostrar0()"><strong>Añadir formulario</strong></button>
+		<button id="boton00" type="button" onclick="ocultar0()" style="display: none;"><strong>Eliminar formulario</strong></button><br>
 	</div>
 
-	<form id="nametext0" onclick="mostrar00()" style="display: none; text-align: center;">
+	<form id="nametext0" onclick="mostrar00()" style="display: none; text-align: center; margin: 20px;">
 
-		<div class="form" style="float: right; margin-top: -400px; margin-right: 300px; border: 2px solid black;">
-		<p style="padding: 5px; border: 1px solid black"><strong>PINCHA Y RELLENA EL FORMULARIO</strong></p><br>
+		<div class="form" style="border: 2px solid white;">
+		<p style="padding: 5px; border: 1px solid white; color: white;"><strong>PINCHA Y RELLENA EL FORMULARIO</strong></p><br>
 
-		<button id="boton1" type="button" onclick="mostrar()">Mostrar Nombre</button>
-		<button id="boton2" type="button" onclick="ocultar()" style="display: none;">Ocultar Nombre</label></button><br>
+		<button id="boton1" type="button" onclick="mostrar()"><strong>Mostrar Nombre</strong></button>
+		<button id="boton2" type="button" onclick="ocultar()" style="display: none;"><strong>Ocultar Nombre</strong></label></button><br>
 		<input type="text" name="Nombre" id="nametext" style="display: none;">
 		<br>
-		<button id="boton3" type="button" onclick="mostrar2()">Mostrar Apellidos</button>
-		<button id="boton4" type="button" onclick="ocultar2()" style="display: none;">Ocultar Apellidos</button><br>
+		<button id="boton3" type="button" onclick="mostrar2()"><strong>Mostrar Apellidos</strong></button>
+		<button id="boton4" type="button" onclick="ocultar2()" style="display: none;"><strong>Ocultar Apellidos</strong></button><br>
 		<input type="text" name="Apellidos" id="nametext2" style="display: none">
 	<br>
-		<button id="boton5" type="button" onclick="mostrar3()">Mostrar Correo</button>
-		<button id="boton6" type="button" onclick="ocultar3()" style="display: none;">Ocultar Correo</button>
-		<input type="email" name="email" id="nametext3" style="display: none;"><br>
+		<button id="boton5" type="button" onclick="mostrar3()"><strong>Mostrar Correo</strong></button>
+		<button id="boton6" type="button" onclick="ocultar3()" style="display: none;"><strong>Ocultar Correo</strong></button><br>
+		<input type="email" name="email" id="nametext3" style="display: none;">
 	<br>
-		<button id="boton7" type="button" onclick="mostrar4()">Mostrar Fecha</button>
-		<button id="boton8" type="button" onclick="ocultar4()" style="display: none;">Ocultar Fecha</button><br>
+		<button id="boton7" type="button" onclick="mostrar4()"><strong>Mostrar Fecha</strong></button>
+		<button id="boton8" type="button" onclick="ocultar4()" style="display: none;"><strong>Ocultar Fecha</strong></button><br>
 		<input type="date" name="fecha" min="2001" max="2019" id="nametext4" style="display: none">
 	<br>
-		<button id="boton9" type="button" onclick="mostrar5()">Mostrar Satisfacción</button>
-		<button id="boton10" type="button" onclick="ocultar5()" style="display: none;">Ocultar Satisfacción</button>
+		<button id="boton9" type="button" onclick="mostrar5()"><strong>Mostrar Satisfacción</strong></button>
+		<button id="boton10" type="button" onclick="ocultar5()" style="display: none;"><strong>Ocultar Satisfacción</strong></button>
 	<br>
 		<select id="nametext5" style="display: none;">
 			<option value="---">---</option>
@@ -61,9 +82,37 @@
 		</select>
 		<br>
 			<label for="enviar"></label><br>
-			<input type="submit" name="enviar"><br>
+			<input type="submit" name="enviar" style="cursor: pointer;"><br>
 		</div>
 	</form>
+	<br>
+	<br>
+	<p style="position: relative; padding-top: 50px; margin: 20px;">Este formulario es integrado bajo la protección de datos, cualquier dato añadido sera totalmente confidencial entre web-usuario. Cada uno de los elementos descritos en los apartados son opcionales a rellenar y consideran que los datos son veridicos teniendo que confirmar mediante correo electrónico la identidad.</p>
+
+	<h3 style="color: white; margin: 20px;">PASOS A SEGUIR</h2>
+		<div>
+			<ol>
+				<li class="lista">Hacer click en Añadir formulario</li>
+				<li class="lista">Rellenar formulario</li>
+				<li class="lista">Click en enviar</li>
+			</ol>
+	</div>
+
+
+<footer>
+
+	<h1 style="color: black; max-width: 100%; border: 2px solid black;">PIE DE PÁGINA</h1>
+	<ul>
+		<li class="lista2">Número 1</li>
+		<li class="lista2">Número 1</li>
+		<li class="lista2">Número 1</li>
+		<li class="lista2">Número 1</li>
+		<li class="lista2">Número 1</li>
+		<li class="lista2">Número 1</li>
+		<li class="lista2">Número 1</li>
+	</ul>
+	
+</footer>
 
 <script type="text/javascript">
 
@@ -127,10 +176,21 @@
 		document.getElementById('boton0').style.display='block';
 		document.getElementById('boton00').style.display='none';
 	}
+	function mostrarlogin(){
+		document.getElementById('login1').style.display='inline-block';
+		document.getElementById('login').style.display='none';
+		document.getElementById('login2').style.display='inline-block';
+	}
+	function ocultarlogin(){
+		document.getElementById('login1').style.display='none';
+		document.getElementById('login').style.display='inline-block';
+		document.getElementById('login2').style.display='none';
+	}
 
 </script>
 
 
 </body>
+
 
 </html>

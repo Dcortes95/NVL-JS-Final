@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Proyecto final Javascript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+	<a href="final.html"><img src="img/logo.png" style="max-width: 100%;"></a>
+	<div class="cabecera">
+	<nav>
+		<h1>
+			<ul>
+				<input type="search" name="Buscador" placeholder="Buscar aqui..." style="position: relative; background-color: white; display: inline-block; margin-left: -50px; ">
+				<button style="cursor: pointer;">Buscar</button>
+				<a href="final.html"><li>Inicio / Formulario</li></a>
+				<a href="nosotros.html"><li>Acerca de nosotros</li></a>
+				<li>Instrucciones para enviar formulario</li>
+				<button id="login"onclick="mostrarlogin()" style="background-color: transparent; border: 0px; font-size: 20px; cursor: pointer;"><li><strong>Login</strong></li></a></button>
+				<button id="login2" onclick="ocultarlogin()" style="background-color: transparent; border: 0px; font-size: 20px; display: none;"><li><strong>No Login</strong></li></a></button>
+		<div style="border: 2px solid black; display: inline-block; right: 5px; display: none; cursor: pointer;" id="login1">
+				<label for="Usuario" style="margin: 5px; margin-right: 10px;">Usuario</label>
+				<input type="text" name="usuario" style="top: 100px;">
+			<div style="margin: 5px;">
+				<label for="Contraseña">Contraseña</label>
+				<input type="password" name="contraseña">
+				<input type="submit" name="enviar" style="display: block; margin-left: 125px;
+				margin-top: 5px; cursor: pointer;">
+			</div>
+		</div>
+			</ul>
+		</h1>
+
+
+		
+	</nav>
+	</div>
+</header>
+	<h1 style="padding-top: 10px; text-align: center;">FORMULARIO</h1>
+
+<script type="text/javascript">
+	
+	function mostrarlogin(){
+		document.getElementById('login1').style.display='inline-block';
+		document.getElementById('login').style.display='none';
+		document.getElementById('login2').style.display='inline-block';
+	}
+	function ocultarlogin(){
+		document.getElementById('login1').style.display='none';
+		document.getElementById('login').style.display='inline-block';
+		document.getElementById('login2').style.display='none';
+	}
+</script>
+</body>
+</html>
